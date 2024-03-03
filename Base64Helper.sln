@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base64Helper.ConsoleApp", "Base64Helper.ConsoleApp\Base64Helper.ConsoleApp.csproj", "{9BF34B83-19ED-41D0-B260-2B0367780325}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base64Helper.WebApp", "Base64Helper.WebApp\Base64Helper.WebApp.csproj", "{0795DC8B-19A2-4BFF-99EB-F7144B1FC63C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9BF34B83-19ED-41D0-B260-2B0367780325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BF34B83-19ED-41D0-B260-2B0367780325}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BF34B83-19ED-41D0-B260-2B0367780325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0795DC8B-19A2-4BFF-99EB-F7144B1FC63C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0795DC8B-19A2-4BFF-99EB-F7144B1FC63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0795DC8B-19A2-4BFF-99EB-F7144B1FC63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0795DC8B-19A2-4BFF-99EB-F7144B1FC63C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

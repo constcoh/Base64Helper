@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Base64 helper";
+}
+
+<script>
+    function encode()
+    {
+        var input = document.getElementById("input-text").value;
+
+        var output = btoa(input);
+
+        document.getElementById("output-text").value = output;
+    }
+    
+    function decode()
+    {
+        try {
+            var input = document.getElementById("input-text").value;
+    
+            var output = atob(input);
+
+            document.getElementById("output-text").value = output;
+        } catch (er) {
+            alert("Error! please check input");
+        }
+    }
+    
+    function swap()
+    {
+        var temp = document.getElementById("input-text").value;
+        document.getElementById("input-text").value = document.getElementById("output-text").value;
+        document.getElementById("output-text").value = temp;
+    }
+    
+    function encodeRows()
+    {
+        var input = document.getElementById("input-text").value;
+        var inputValues = input.split('\n');
+
+        var outputValues = [];
+
+        inputValues.forEach(function(val) 
+        { 
+            outputValues.push(btoa(val));
+        });
+
+        var output = outputValues.join('\n');
+
+        document.getElementById("output-text").value = output;
+    }
+    
+    function decodeRows()
+    {
+        var input = document.getElementById("input-text").value;
+        var inputValues = input.split('\n');
+
+        var outputValues = [];
+
+        inputValues.forEach(function(val) 
+        { 
+            outputValues.push(atob(val));
+        });
+
+        var output = outputValues.join('\n');
+
+        document.getElementById("output-text").value = output;
+    }
+    
+</script>
+<div class="text-center">
+    <h4 class="display-4">Welcome to base64 helper</h4>
+
+    <p>Input</p>
+    <textarea style="width:100%;height:200px;" id="input-text"></textarea>
+
+    <p>
+        <button onclick="swap();">Swap input and output</button>
+    </p>
+    
+    <p>
+        Encode all text
+        <button onclick="encode();">Encode to base64</button>
+        <button onclick="decode();">Decode from base64</button>
+    </p>
+    
+    <p>
+        Encode each row separately
+        <button onclick="encodeRows();">Encode rows to base64</button>
+        <button onclick="decodeRows();">Decode rows from base64</button>
+    </p>
+
+    <p>Output</p>
+
+    <textarea style="width:100%;height:200px;" id="output-text"></textarea>
+</div>
